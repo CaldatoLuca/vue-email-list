@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Email List</title>
     <!-- !axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- !axios/ -->
@@ -14,8 +14,7 @@
   <body>
     <div id="app" v-cloak>
       <ul>
-        <li>{{ email }}</li>
-        <li>{{ email2 }}</li>
+        <li v-for="email in emails">{{ email }}</li>
       </ul>
     </div>
 
