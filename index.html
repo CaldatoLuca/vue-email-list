@@ -13,7 +13,7 @@
   </head>
   <body>
     <div id="app" v-cloak>
-      <ul>
+      <ul v-if="condition()">
         <li v-for="email in emails">{{ email }}</li>
       </ul>
     </div>

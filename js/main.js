@@ -9,6 +9,15 @@ const vueConfig = {
       emails: [],
     };
   },
+  methods: {
+    condition() {
+      if (this.emails.length === 10) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
   created() {
     for (let i = 0; i < 10; i++) {
       axios.get(this.apiUrl).then((response) => {
