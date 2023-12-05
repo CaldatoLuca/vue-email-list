@@ -4,18 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email List</title>
+    <!-- !icon -->
+    <script
+      src="https://kit.fontawesome.com/d7e1ca7451.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !icon/ -->
+
     <!-- !axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- !axios/ -->
+
     <!-- !my css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- !my css/ -->
   </head>
   <body>
     <div id="app" v-cloak>
-      <ul v-if="condition()">
-        <li v-for="email in emails">{{ email }}</li>
-      </ul>
+      <div class="container">
+        <div class="list">
+          <h1>Email List</h1>
+          <button @click="readEmail">Select all</button>
+          <ul v-if="condition()">
+            <li v-for="email in emails">
+              <i v-show="closeEnvelope" class="fa-regular fa-envelope"></i>
+              <i v-show="openEnvelope" class="fa-regular fa-envelope-open"></i>
+              {{ email }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- !vue js -->

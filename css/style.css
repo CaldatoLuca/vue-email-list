@@ -1,3 +1,54 @@
 [v-cloak] {
   display: none;
 }
+/* !reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+/* !common */
+.container {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgb(148, 0, 255) 0%,
+    rgb(174, 210, 255) 100%
+  );
+  color: rgb(228, 241, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.list {
+  background-color: rgba(39, 0, 93, 0.5);
+  padding: 100px;
+  border-radius: 20px;
+}
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+li {
+  margin: 8px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+li:hover {
+  color: rgb(174, 210, 255);
+}
+i {
+  margin-right: 5px;
+}
